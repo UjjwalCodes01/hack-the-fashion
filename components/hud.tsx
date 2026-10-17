@@ -15,7 +15,7 @@ export function LogoMark({ className = "size-11" }: { className?: string }) {
     <svg viewBox="0 0 6 6" className={className} shapeRendering="crispEdges" aria-hidden>
       {cells.flatMap((row, y) =>
         row.map((v, x) =>
-          v ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill={v === 1 ? "#f3f8ff" : "#e040fb"} /> : null,
+          v ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill={v === 1 ? "#fffaf3" : "#fa6027"} /> : null,
         ),
       )}
     </svg>
@@ -25,7 +25,7 @@ export function LogoMark({ className = "size-11" }: { className?: string }) {
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`flex items-center gap-3 ${className}`}>
-      <LogoMark className="size-10 drop-shadow-[0_0_8px_rgba(224,64,251,0.5)] md:size-11" />
+      <LogoMark className="size-10 drop-shadow-[0_0_8px_rgba(250,96,39,0.5)] md:size-11" />
       <span className="flex flex-col font-display leading-none">
         <span className="text-[11px] font-semibold tracking-[0.18em] md:text-xs">
           <span className="text-magenta">HACK</span> <span className="text-frost">THE</span>
@@ -92,8 +92,8 @@ export function WordStack({
 export function FabricSwatch({ id, tone = "violet", className = "" }: { id: string; tone?: "violet" | "cyan"; className?: string }) {
   const matrix =
     tone === "violet"
-      ? "0 0 0 0.75 0.05  0 0 0 0.12 0  0 0 0 1 0.1  0 0 0 0 1"
-      : "0 0 0 0.25 0  0 0 0 0.75 0.05  0 0 0 1 0.12  0 0 0 0 1";
+      ? "0 0 0 1 0.12  0 0 0 0.36 0.02  0 0 0 0.06 0  0 0 0 0 1"
+      : "0 0 0 1 0.1  0 0 0 0.72 0.05  0 0 0 0.22 0  0 0 0 0 1";
   return (
     <svg viewBox="0 0 100 100" preserveAspectRatio="none" className={className} aria-hidden>
       <filter id={id} x="0" y="0" width="100%" height="100%">
@@ -125,7 +125,7 @@ export function Meters({ values, className = "" }: { values: { v: number; c: "cy
 }
 
 /** Tiny sparkline. */
-export function Spark({ className = "", color = "#22d3ee" }: { className?: string; color?: string }) {
+export function Spark({ className = "", color = "#e8a112" }: { className?: string; color?: string }) {
   return (
     <svg viewBox="0 0 80 30" className={className} aria-hidden>
       <polyline
@@ -150,7 +150,7 @@ export function Globe({ className = "size-6" }: { className?: string }) {
 }
 
 /** Line-art jacket used in the "garment detection" readouts. */
-export function JacketOutline({ className = "", color = "#7dd3fc" }: { className?: string; color?: string }) {
+export function JacketOutline({ className = "", color = "#fbc760" }: { className?: string; color?: string }) {
   return (
     <svg viewBox="0 0 64 64" fill="none" stroke={color} strokeWidth="1.3" strokeLinejoin="round" className={className} aria-hidden>
       <path d="M24 6h16l4 4 10 6 6 26-6 2-4-16v32H14V28l-4 16-6-2 6-26 10-6z" />
@@ -164,7 +164,7 @@ export function NeonFrame({
   hex,
   fill,
   className = "",
-  innerClassName = "bg-[#07051a]/95",
+  innerClassName = "bg-[#1a0d05]/95",
   children,
 }: {
   hex: string;
@@ -191,9 +191,9 @@ export function Banner({ side, lines = ["Hack", "the", "Fashion"], className = "
       aria-hidden
       className={`absolute top-[11%] hidden w-[8.5%] max-w-[140px] min-[1400px]:block ${side === "left" ? "left-[1.6%] -rotate-2" : "right-[1.6%] rotate-2"} ${className}`}
     >
-      <div className="mx-auto h-2 w-[112%] -translate-x-[5%] rounded-sm bg-gradient-to-r from-[#3b1d5e] via-[#7c3aed] to-[#3b1d5e]" />
-      <div className="relative flex aspect-[1/3] flex-col items-center border-2 border-magenta/80 bg-gradient-to-b from-[#1a0b33] to-[#2a0b45] pt-[30%] shadow-[0_0_30px_rgba(224,64,251,0.45)]">
-        <LogoMark className="w-[45%] drop-shadow-[0_0_10px_#e040fb]" />
+      <div className="mx-auto h-2 w-[112%] -translate-x-[5%] rounded-sm bg-gradient-to-r from-[#5e371d] via-[#eb7424] to-[#5e371d]" />
+      <div className="relative flex aspect-[1/3] flex-col items-center border-2 border-magenta/80 bg-gradient-to-b from-[#331b0b] to-[#45220b] pt-[30%] shadow-[0_0_30px_rgba(250,96,39,0.45)]">
+        <LogoMark className="w-[45%] drop-shadow-[0_0_10px_#fa6027]" />
         <p className="mt-[18%] -rotate-[10deg] text-center font-display text-[clamp(14px,1.4vw,22px)] font-black uppercase leading-[1.05] text-frost">
           {lines.map((l) => (
             <span key={l} className="block">
@@ -203,7 +203,7 @@ export function Banner({ side, lines = ["Hack", "the", "Fashion"], className = "
         </p>
         <div className="absolute inset-x-0 bottom-0 grid h-[22%] grid-cols-4 gap-1 p-2">
           {[1, 0, 1, 1, 0, 1, 1, 0].map((v, i) => (
-            <span key={i} className={v ? "bg-magenta/70 shadow-[0_0_8px_#e040fb]" : "bg-violet/30"} />
+            <span key={i} className={v ? "bg-magenta/70 shadow-[0_0_8px_#fa6027]" : "bg-violet/30"} />
           ))}
         </div>
       </div>

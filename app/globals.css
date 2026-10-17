@@ -2,23 +2,23 @@
 
 /* ── Theme: "Neon Circuit" — near-black, violet, magenta and cyan ─────────── */
 @theme inline {
-  --color-void: #04030a;
-  --color-violet: #a855f7;
-  --color-violet-deep: #7c2fe0;
-  --color-magenta: #e040fb;
-  --color-cyan: #22d3ee;
-  --color-frost: #e6f6ff;
+  --color-void: #0a0603;
+  --color-violet: #f6863c;
+  --color-violet-deep: #d96a20;
+  --color-magenta: #fa6027;
+  --color-cyan: #e8a112;
+  --color-frost: #fff7e6;
 
   /* Legacy names used by the not-yet-redesigned sections and /terms, remapped to neon. */
-  --color-ink: #05040b;
-  --color-ink-2: #0a0816;
-  --color-ink-3: #110d22;
-  --color-line: #2a2347;
-  --color-ivory: #f2f0ff;
-  --color-mute: #9a93b8;
-  --color-gold: #b65cff;
-  --color-gold-deep: #7c2fe0;
-  --color-gold-soft: #d9b3ff;
+  --color-ink: #0b0704;
+  --color-ink-2: #160e08;
+  --color-ink-3: #22150d;
+  --color-line: #473123;
+  --color-ivory: #fff6f0;
+  --color-mute: #ad9483;
+  --color-gold: #ff8d40;
+  --color-gold-deep: #d96a20;
+  --color-gold-soft: #ffd1b3;
 
   --font-display: var(--font-orbitron), ui-sans-serif, sans-serif;
   --font-ui: var(--font-chakra), ui-sans-serif, sans-serif;
@@ -112,75 +112,75 @@ body {
 
 /* ── Neon type ─────────────────────────────────────────────────────────── */
 .neon-white {
-  color: #f3f8ff;
+  color: #fffaf3;
   text-shadow:
-    0 0 6px rgb(190 225 255 / 0.55),
-    0 0 22px rgb(110 170 255 / 0.45),
-    0 0 48px rgb(140 90 255 / 0.35);
+    0 0 6px rgb(255 226 190 / 0.55),
+    0 0 22px rgb(255 177 81 / 0.45),
+    0 0 48px rgb(255 139 62 / 0.35);
 }
 
 .neon-violet {
-  background: linear-gradient(180deg, #f0c8ff 0%, #c06bff 38%, #9b3df5 70%, #7425d6 100%);
+  background: linear-gradient(180deg, #ffd7c8 0%, #ff954e 38%, #f47826 70%, #c56322 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 14px rgb(177 75 255 / 0.75)) drop-shadow(0 0 40px rgb(177 75 255 / 0.35));
+  filter: drop-shadow(0 0 14px rgb(255 131 49 / 0.75)) drop-shadow(0 0 40px rgb(255 131 49 / 0.35));
 }
 
 .neon-cyan {
   color: var(--color-cyan);
   text-shadow:
-    0 0 8px rgb(34 211 238 / 0.7),
-    0 0 26px rgb(34 211 238 / 0.4);
+    0 0 8px rgb(232 161 18 / 0.7),
+    0 0 26px rgb(232 161 18 / 0.4);
 }
 
 .neon-magenta {
   color: var(--color-magenta);
   text-shadow:
-    0 0 8px rgb(224 64 251 / 0.7),
-    0 0 26px rgb(224 64 251 / 0.4);
+    0 0 8px rgb(250 96 39 / 0.7),
+    0 0 26px rgb(250 96 39 / 0.4);
 }
 
 .grad-circuit {
-  background: linear-gradient(90deg, #ff3df2 0%, #b45cff 45%, #22d3ee 100%);
+  background: linear-gradient(90deg, #ff5e24 0%, #ff8d40 45%, #e8a112 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 16px rgb(200 80 255 / 0.55));
+  filter: drop-shadow(0 0 16px rgb(255 107 53 / 0.55));
 }
 
 .grad-fashion {
-  background: linear-gradient(90deg, #b06bff 0%, #d84cfb 55%, #ff3df2 100%);
+  background: linear-gradient(90deg, #ff954e 0%, #fa6832 55%, #ff5e24 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 14px rgb(224 64 251 / 0.5));
+  filter: drop-shadow(0 0 14px rgb(250 96 39 / 0.5));
 }
 
 .grad-24 {
-  background: linear-gradient(180deg, #a7f3ff 0%, #22d3ee 45%, #3b82f6 100%);
+  background: linear-gradient(180deg, #ffe2a7 0%, #e8a112 45%, #f59724 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 18px rgb(34 211 238 / 0.65));
+  filter: drop-shadow(0 0 18px rgb(232 161 18 / 0.65));
 }
 
 /* ── HUD surfaces ──────────────────────────────────────────────────────── */
 .hud-panel {
-  background: linear-gradient(180deg, rgb(14 10 32 / 0.82), rgb(6 5 16 / 0.88));
-  border: 1px solid rgb(168 85 247 / 0.55);
+  background: linear-gradient(180deg, rgb(32 19 10 / 0.82), rgb(16 9 5 / 0.88));
+  border: 1px solid rgb(246 134 60 / 0.55);
   box-shadow:
-    inset 0 0 0 1px rgb(34 211 238 / 0.06),
-    inset 0 0 30px rgb(168 85 247 / 0.08),
-    0 0 24px rgb(168 85 247 / 0.28);
+    inset 0 0 0 1px rgb(232 161 18 / 0.06),
+    inset 0 0 30px rgb(246 134 60 / 0.08),
+    0 0 24px rgb(246 134 60 / 0.28);
   backdrop-filter: blur(8px);
 }
 
 .hud-panel-cyan {
-  border-color: rgb(34 211 238 / 0.55);
+  border-color: rgb(232 161 18 / 0.55);
   box-shadow:
-    inset 0 0 30px rgb(34 211 238 / 0.08),
-    0 0 24px rgb(34 211 238 / 0.25);
+    inset 0 0 30px rgb(232 161 18 / 0.08),
+    0 0 24px rgb(232 161 18 / 0.25);
 }
 
 .clip-slant {
@@ -194,8 +194,8 @@ body {
 /* Faint blueprint grid used behind HUD cards. */
 .hud-grid {
   background-image:
-    linear-gradient(rgb(168 85 247 / 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(168 85 247 / 0.08) 1px, transparent 1px);
+    linear-gradient(rgb(246 134 60 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(246 134 60 / 0.08) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -221,7 +221,7 @@ body {
 }
 
 .text-outline-ivory {
-  -webkit-text-stroke: 1px rgb(242 240 255 / 0.2);
+  -webkit-text-stroke: 1px rgb(255 246 240 / 0.2);
   color: transparent;
 }
 

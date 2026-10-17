@@ -4,8 +4,8 @@ import { Reveal } from "@/components/motion";
 import { EVENT, JUDGES, type Judge } from "@/lib/content";
 
 const TONES = [
-  { hex: "#c13cff", text: "text-[#d27bff]", tab: "bg-[#c13cff] text-white", pill: "border-[#c13cff] bg-[#c13cff]/15 text-[#e7b8ff]" },
-  { hex: "#22d3ee", text: "text-cyan", tab: "bg-cyan text-void", pill: "border-cyan bg-cyan/15 text-cyan" },
+  { hex: "#ff5e23", text: "text-[#ff9e5d]", tab: "bg-[#ff5e23] text-white", pill: "border-[#ff5e23] bg-[#ff5e23]/15 text-[#ffd4b8]" },
+  { hex: "#e8a112", text: "text-cyan", tab: "bg-cyan text-void", pill: "border-cyan bg-cyan/15 text-cyan" },
 ];
 
 /** Little pixel cluster used as a header ornament. */
@@ -16,7 +16,7 @@ function Pixels({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 5 5" className={className} shapeRendering="crispEdges" aria-hidden>
       {on.map(([x, y]) => (
-        <rect key={`${x}${y}`} x={x} y={y} width="1" height="1" fill={(x + y) % 3 === 0 ? "#f3f8ff" : "#e040fb"} />
+        <rect key={`${x}${y}`} x={x} y={y} width="1" height="1" fill={(x + y) % 3 === 0 ? "#fffaf3" : "#fa6027"} />
       ))}
     </svg>
   );
@@ -28,7 +28,7 @@ function Portrait({ judge, tone }: { judge: Judge; tone: (typeof TONES)[number] 
   return (
     <div className="relative aspect-[5/6] overflow-hidden border" style={{ borderColor: `${tone.hex}99` }}>
       {/* holo-city backdrop */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-[#1b0b3a] via-[#100726] to-[#07051a]" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-[#3a1e0b] via-[#261307] to-[#1a0d05]" />
       <div aria-hidden className="hud-grid absolute inset-0 opacity-70" />
       <div aria-hidden className="absolute inset-x-0 bottom-0 flex h-2/3 items-end gap-[3%] px-[4%] opacity-50">
         {[38, 70, 52, 88, 44, 64, 30, 76].map((h, i) => (
@@ -79,7 +79,7 @@ function JudgeCard({ judge, i }: { judge: Judge; i: number }) {
       >
         {String(i + 1).padStart(2, "0")}
       </span>
-      <NeonFrame hex={tone.hex} className="h-full" innerClassName="bg-[#08051c]/92">
+      <NeonFrame hex={tone.hex} className="h-full" innerClassName="bg-[#1c0e05]/92">
         <div className="flex h-full flex-col p-2.5 pb-4">
           <Portrait judge={judge} tone={tone} />
           <div className="flex flex-1 flex-col px-1.5 pt-3">
@@ -111,18 +111,18 @@ export default function Judges() {
   return (
     <section id="judges" className="relative isolate overflow-hidden pb-[10%] pt-24 md:pt-28 lg:min-h-[max(100svh,900px)]">
       <div aria-hidden className="absolute inset-0 -z-10 bg-void">
-        <Image src="/our_judges_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
+        <Image src="/new_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-void to-transparent" />
       </div>
 
       <div className="relative mx-auto w-[92%] max-w-[1200px] xl:w-[72%]">
         {/* Heading */}
         <Reveal className="relative text-center">
-          <Pixels className="absolute -top-2 left-0 hidden size-10 drop-shadow-[0_0_10px_#e040fb] md:block lg:left-[4%]" />
-          <Pixels className="absolute -top-2 right-0 hidden size-10 -scale-x-100 drop-shadow-[0_0_10px_#e040fb] md:block lg:right-[4%]" />
+          <Pixels className="absolute -top-2 left-0 hidden size-10 drop-shadow-[0_0_10px_#fa6027] md:block lg:left-[4%]" />
+          <Pixels className="absolute -top-2 right-0 hidden size-10 -scale-x-100 drop-shadow-[0_0_10px_#fa6027] md:block lg:right-[4%]" />
           <Kicker>// 04. Judges //</Kicker>
           <h2 className="mt-4 font-display text-[10vw] font-black uppercase italic leading-none sm:text-6xl lg:text-7xl">
-            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text pr-2 text-transparent drop-shadow-[0_0_14px_rgba(200,220,255,0.35)]">
+            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text pr-2 text-transparent drop-shadow-[0_0_14px_rgba(255,230,200,0.35)]">
               Meet the
             </span>{" "}
             <span className="grad-circuit pr-2">Judges</span>

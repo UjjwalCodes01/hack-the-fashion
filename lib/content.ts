@@ -33,7 +33,6 @@ export const NAV_LINKS = [
   { href: "#tracks", label: "Tracks" },
   { href: "#prizes", label: "Prizes" },
   { href: "#timeline", label: "Timeline" },
-  { href: "#judges", label: "Judges" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -330,10 +329,10 @@ export const RULES: { title: string; text: string; icon: "users" | "bulb" | "cod
 
 export const SUBMISSION: { title: string; text: string; via: string; icon: "box" | "play" | "file" | "book"; tone: string }[] = [
   { title: "Source code", text: "GitHub repository (public) with clean code and proper documentation.", via: "GitHub link", icon: "box", tone: "#22c55e" },
-  { title: "Demo video", text: "2–3 minute video explaining the problem, solution and demo.", via: "YouTube / Drive link", icon: "play", tone: "#22d3ee" },
+  { title: "Demo video", text: "2–3 minute video explaining the problem, solution and demo.", via: "YouTube / Drive link", icon: "play", tone: "#e8a112" },
   { title: "Pitch deck", text: "Max 8 slides (PDF) covering problem, solution, tech stack and impact.", via: "Upload PDF", icon: "file", tone: "#f5b83d" },
-  { title: "README", text: "Clear setup instructions, features and future scope.", via: "Include in repo", icon: "book", tone: "#a855f7" },
-  { title: "Solution brief", text: "One-page summary of your idea, approach and expected impact.", via: "Upload PDF", icon: "file", tone: "#e040fb" },
+  { title: "README", text: "Clear setup instructions, features and future scope.", via: "Include in repo", icon: "book", tone: "#f6863c" },
+  { title: "Solution brief", text: "One-page summary of your idea, approach and expected impact.", via: "Upload PDF", icon: "file", tone: "#fa6027" },
 ];
 
 export const SUBMISSION_STEPS = [

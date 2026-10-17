@@ -20,7 +20,7 @@ function ScannerCard() {
       <div className="grid grid-cols-[72px_1fr_84px] gap-3 p-4 md:grid-cols-[96px_1fr_112px] md:gap-4 md:p-5">
         {/* Left: fabric analysis */}
         <div className="flex flex-col gap-3">
-          <div className="aspect-square overflow-hidden border border-magenta/70 shadow-[0_0_14px_rgba(224,64,251,0.45)]">
+          <div className="aspect-square overflow-hidden border border-magenta/70 shadow-[0_0_14px_rgba(250,96,39,0.45)]">
             <FabricSwatch id="about-fab-v" tone="violet" className="h-full w-full" />
           </div>
           <div className="aspect-square overflow-hidden border border-cyan/50">
@@ -52,7 +52,7 @@ function ScannerCard() {
               alt="White and violet tech-wear jacket wrapped in cyan light trails"
               fill
               sizes="(min-width:1024px) 360px, 60vw"
-              className="object-contain drop-shadow-[0_10px_40px_rgba(34,211,238,0.35)]"
+              className="object-contain drop-shadow-[0_10px_40px_rgba(232,161,18,0.35)]"
             />
           </div>
           <p className="grad-24 relative font-display text-6xl font-black leading-none md:text-8xl">24</p>
@@ -115,7 +115,7 @@ export default function About() {
     <section id="about" className="relative isolate overflow-hidden py-24 md:py-28 lg:flex lg:min-h-[max(100svh,56.3vw)] lg:items-center lg:py-[7vw]">
       {/* HUD frame backdrop: stretched to the section on desktop so the frame edges stay visible */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-void">
-        <Image src="/about_bg.png" alt="" fill sizes="100vw" className="object-cover lg:object-fill" />
+        <Image src="/new_bg.png" alt="" fill sizes="100vw" className="object-cover lg:object-fill" />
       </div>
 
       {/* Side word stacks */}

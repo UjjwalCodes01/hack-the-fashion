@@ -48,10 +48,10 @@ function StopCard({ i, compact = false }: { i: number; compact?: boolean }) {
   const t = TIMELINE[i];
   const magenta = i % 2 === 0;
   const tone = magenta
-    ? { box: "border-magenta text-magenta shadow-[0_0_16px_rgba(224,64,251,0.55)]", num: "text-magenta", edge: "border-magenta/70" }
-    : { box: "border-cyan text-cyan shadow-[0_0_16px_rgba(34,211,238,0.5)]", num: "text-cyan", edge: "border-cyan/70" };
+    ? { box: "border-magenta text-magenta shadow-[0_0_16px_rgba(250,96,39,0.55)]", num: "text-magenta", edge: "border-magenta/70" }
+    : { box: "border-cyan text-cyan shadow-[0_0_16px_rgba(232,161,18,0.5)]", num: "text-cyan", edge: "border-cyan/70" };
   return (
-    <div className={`clip-chamfer flex items-stretch border bg-void/85 backdrop-blur-sm ${tone.edge} ${compact ? "" : "shadow-[0_0_24px_rgba(168,85,247,0.25)]"}`}>
+    <div className={`clip-chamfer flex items-stretch border bg-void/85 backdrop-blur-sm ${tone.edge} ${compact ? "" : "shadow-[0_0_24px_rgba(246,134,60,0.25)]"}`}>
       <div className={`m-2 flex w-14 shrink-0 items-center justify-center border-2 bg-void md:w-16 ${tone.box}`}>
         <Icon name={t.icon} className="size-7 md:size-8" />
       </div>
@@ -81,7 +81,7 @@ function Track() {
           alt="Neon race track winding through seven checkpoints to the finish line"
           fill
           sizes="(min-width:1024px) 1000px, 100vw"
-          className="object-contain drop-shadow-[0_0_24px_rgba(224,64,251,0.35)]"
+          className="object-contain drop-shadow-[0_0_24px_rgba(250,96,39,0.35)]"
         />
       </motion.div>
       <ol>
@@ -174,13 +174,13 @@ export default function Timeline() {
 
         {/* Mobile: stacked laps */}
         <ol className="relative mt-10 space-y-4 pl-6 md:hidden">
-          <span aria-hidden className="absolute bottom-2 left-0 top-2 w-0.5 bg-gradient-to-b from-magenta via-violet to-cyan shadow-[0_0_10px_#a855f7]" />
+          <span aria-hidden className="absolute bottom-2 left-0 top-2 w-0.5 bg-gradient-to-b from-magenta via-violet to-cyan shadow-[0_0_10px_#f6863c]" />
           {TIMELINE.map((_, i) => (
             <li key={i} className="relative">
               <span
                 aria-hidden
                 className={`absolute -left-[31px] top-1/2 size-3.5 -translate-y-1/2 rounded-full border-2 bg-void ${
-                  i % 2 === 0 ? "border-magenta shadow-[0_0_10px_#e040fb]" : "border-cyan shadow-[0_0_10px_#22d3ee]"
+                  i % 2 === 0 ? "border-magenta shadow-[0_0_10px_#fa6027]" : "border-cyan shadow-[0_0_10px_#e8a112]"
                 }`}
               />
               <Reveal delay={0.04 * i} y={16}>
@@ -188,7 +188,7 @@ export default function Timeline() {
               </Reveal>
             </li>
           ))}
-          <li className="pt-2 text-center font-display text-3xl font-black uppercase tracking-[0.1em] text-magenta [text-shadow:0_0_14px_#e040fb]">
+          <li className="pt-2 text-center font-display text-3xl font-black uppercase tracking-[0.1em] text-magenta [text-shadow:0_0_14px_#fa6027]">
             Finish
           </li>
         </ol>

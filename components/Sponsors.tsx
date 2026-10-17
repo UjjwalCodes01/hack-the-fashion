@@ -4,8 +4,8 @@ import { Banner, Kicker, NeonFrame } from "@/components/hud";
 import { Reveal } from "@/components/motion";
 import { EVENT } from "@/lib/content";
 
-const MAGENTA = "#d946ef";
-const CYAN = "#22d3ee";
+const MAGENTA = "#ed622f";
+const CYAN = "#e8a112";
 
 const ICON: Record<string, string[]> = {
   crown: [
@@ -53,13 +53,13 @@ function Tier({
     <div className={`relative pt-4 ${className}`}>
       <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2" style={{ filter: `drop-shadow(0 0 8px ${hex})` }}>
         <div className="clip-chamfer p-[1.5px]" style={{ background: hex }}>
-          <div className="clip-chamfer flex items-center gap-2 whitespace-nowrap bg-[#0a0620] px-5 py-1.5">
+          <div className="clip-chamfer flex items-center gap-2 whitespace-nowrap bg-[#201006] px-5 py-1.5">
             <Icon name={icon} className="size-4" />
             <span className="font-ui text-[13px] font-bold uppercase tracking-[0.14em] text-frost">{label}</span>
           </div>
         </div>
       </div>
-      <NeonFrame hex={hex} className="h-full" innerClassName="bg-[#08051c]/88">
+      <NeonFrame hex={hex} className="h-full" innerClassName="bg-[#1c0e05]/88">
         <div className="h-full px-5 pb-5 pt-9">{children}</div>
       </NeonFrame>
     </div>
@@ -72,7 +72,7 @@ function Tagline({ children }: { children: ReactNode }) {
 
 function LogoTile({ children, href, label }: { children: ReactNode; href?: string; label?: string }) {
   const cls =
-    "flex h-16 items-center justify-center border border-white/12 bg-[#0c0824]/90 px-3 transition-colors hover:border-white/35 md:h-[4.5rem]";
+    "flex h-16 items-center justify-center border border-white/12 bg-[#241308]/90 px-3 transition-colors hover:border-white/35 md:h-[4.5rem]";
   return href ? (
     <a href={href} aria-label={label} className={`${cls} group`}>
       {children}
@@ -98,9 +98,9 @@ export default function Sponsors() {
   return (
     <section id="sponsors" className="relative isolate overflow-hidden pb-24 pt-24 md:pt-28 lg:min-h-[max(100svh,940px)]">
       <div aria-hidden className="absolute inset-0 -z-10 bg-void">
-        <Image src="/sponsers_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
+        <Image src="/new_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-void to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(4,3,10,0.35)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(10,6,3,0.35)_0%,transparent_60%)]" />
       </div>
 
       <Banner side="left" />
@@ -109,9 +109,9 @@ export default function Sponsors() {
       <div className="relative mx-auto w-[92%] max-w-[1150px] xl:w-[70%]">
         {/* Heading */}
         <Reveal className="text-center">
-          <Kicker>// 08. Sponsors //</Kicker>
+          <Kicker>// 07. Sponsors //</Kicker>
           <h2 className="mt-4 font-display text-[11vw] font-black uppercase leading-none sm:text-6xl lg:text-7xl">
-            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(200,220,255,0.35)]">
+            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(255,230,200,0.35)]">
               Our
             </span>{" "}
             <span className="grad-circuit">Sponsors</span>
@@ -123,7 +123,7 @@ export default function Sponsors() {
             We&apos;re proud to collaborate with industry leaders, innovative brands and communities who believe in the next
             generation of creators.
           </p>
-          <div aria-hidden className="mx-auto mt-5 h-0.5 w-48 bg-gradient-to-r from-transparent via-cyan to-transparent shadow-[0_0_10px_#22d3ee]" />
+          <div aria-hidden className="mx-auto mt-5 h-0.5 w-48 bg-gradient-to-r from-transparent via-cyan to-transparent shadow-[0_0_10px_#e8a112]" />
         </Reveal>
 
         {/* Title sponsor */}
@@ -187,9 +187,9 @@ export default function Sponsors() {
 
         {/* Join bar */}
         <Reveal className="mx-auto mt-8 max-w-[930px]">
-          <NeonFrame hex="#8b5cf6" innerClassName="bg-[#08051c]/90">
+          <NeonFrame hex="#f58a42" innerClassName="bg-[#1c0e05]/90">
             <div className="flex flex-col items-center gap-5 px-6 py-5 text-center md:flex-row md:text-left">
-              <Icon name="handshake" className="size-12 shrink-0 text-magenta drop-shadow-[0_0_8px_#e040fb]" />
+              <Icon name="handshake" className="size-12 shrink-0 text-magenta drop-shadow-[0_0_8px_#fa6027]" />
               <span aria-hidden className="hidden h-12 w-px bg-white/15 md:block" />
               <div className="flex-1">
                 <p className="font-ui text-base font-bold uppercase tracking-[0.3em] text-white">Join our sponsors</p>
@@ -203,7 +203,7 @@ export default function Sponsors() {
               </div>
               <a
                 href={partnerMail}
-                className="group relative inline-flex shrink-0 items-center gap-2 border border-[#f0abfc] bg-gradient-to-r from-[#c026d3] to-[#9333ea] px-7 py-3 font-ui text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_0_24px_rgba(217,70,239,0.55)] transition hover:brightness-125"
+                className="group relative inline-flex shrink-0 items-center gap-2 border border-[#fcc1ab] bg-gradient-to-r from-[#c24d23] to-[#e86f1e] px-7 py-3 font-ui text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_0_24px_rgba(237,98,47,0.55)] transition hover:brightness-125"
               >
                 Become a sponsor <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>

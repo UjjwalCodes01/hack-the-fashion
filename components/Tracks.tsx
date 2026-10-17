@@ -7,9 +7,9 @@ import { At, Stage } from "@/components/stage";
 import { TRACKS, type Track } from "@/lib/content";
 
 const TONE: Record<Track["tone"], { hex: string; text: string }> = {
-  magenta: { hex: "#e040fb", text: "text-magenta" },
-  cyan: { hex: "#22d3ee", text: "text-cyan" },
-  violet: { hex: "#c084fc", text: "text-[#d8b4fe]" },
+  magenta: { hex: "#fa6027", text: "text-magenta" },
+  cyan: { hex: "#e8a112", text: "text-cyan" },
+  violet: { hex: "#fba266", text: "text-[#fed2b4]" },
   teal: { hex: "#2dd4bf", text: "text-[#5eead4]" },
   gold: { hex: "#fbbf24", text: "text-[#fcd34d]" },
 };
@@ -69,7 +69,7 @@ function HoloCube({ size, tone, icon }: { size: number; tone: Track["tone"]; ico
 function TrackCard({ track }: { track: Track }) {
   const t = TONE[track.tone];
   return (
-    <NeonFrame hex={t.hex} innerClassName="bg-[#0a0620]/82 backdrop-blur-sm" className="h-full">
+    <NeonFrame hex={t.hex} innerClassName="bg-[#201006]/82 backdrop-blur-sm" className="h-full">
       <div className="p-4 xl:p-[0.85cqw]">
         <div className="flex items-start gap-3 xl:gap-[0.7cqw]">
           <span
@@ -112,8 +112,8 @@ function BannerText({ l, t, w, lines }: { l: number; t: number; w: number; lines
       className="absolute hidden -rotate-[8deg] flex-col items-center xl:flex"
       style={{ left: `${l}%`, top: `${t}%`, width: `${w}%` } as CSSProperties}
     >
-      <LogoMark className="w-[45%] drop-shadow-[0_0_0.6cqw_#e040fb]" />
-      <p className="mt-[0.8cqw] text-center font-display text-[1.25cqw] font-black uppercase leading-[1.05] text-frost [text-shadow:0_0_0.6cqw_rgba(224,64,251,0.8)]">
+      <LogoMark className="w-[45%] drop-shadow-[0_0_0.6cqw_#fa6027]" />
+      <p className="mt-[0.8cqw] text-center font-display text-[1.25cqw] font-black uppercase leading-[1.05] text-frost [text-shadow:0_0_0.6cqw_rgba(250,96,39,0.8)]">
         {lines.map((x) => (
           <span key={x} className="block">
             {x}
@@ -145,7 +145,7 @@ export default function Tracks() {
         <Reveal>
           <Kicker>// 02. Tracks //</Kicker>
           <h2 className="mt-3 font-display text-[9.5vw] font-black uppercase leading-none sm:text-6xl xl:mt-[0.6cqw] xl:text-[4cqw]">
-            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(200,220,255,0.35)]">
+            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(255,230,200,0.35)]">
               Choose your
             </span>{" "}
             <span className="grad-circuit">Track</span>
@@ -179,9 +179,9 @@ export default function Tracks() {
       {/* Not sure bar */}
       <At l={23} t={85.5} w={54} className="mt-8 xl:mt-0">
         <Reveal>
-          <NeonFrame hex="#c026d3" fill="linear-gradient(90deg,#e040fb,#a855f7 50%,#e040fb)" innerClassName="bg-[#0a0620]/90">
+          <NeonFrame hex="#c24d23" fill="linear-gradient(90deg,#fa6027,#f6863c 50%,#fa6027)" innerClassName="bg-[#201006]/90">
             <div className="flex flex-col items-center gap-4 px-6 py-5 text-center md:flex-row md:text-left xl:gap-[1.4cqw] xl:px-[2cqw] xl:py-[1.1cqw]">
-              <Icon name="flag" className="size-10 shrink-0 text-frost drop-shadow-[0_0_8px_#e040fb] xl:size-[2.6cqw]" filled />
+              <Icon name="flag" className="size-10 shrink-0 text-frost drop-shadow-[0_0_8px_#fa6027] xl:size-[2.6cqw]" filled />
               <div className="flex-1">
                 <p className="font-display text-lg font-bold uppercase tracking-[0.08em] text-white xl:text-[1.35cqw]">Not sure which track?</p>
                 <p className="mt-1 text-sm text-frost/80 xl:text-[0.85cqw]">

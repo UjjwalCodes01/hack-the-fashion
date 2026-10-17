@@ -2,7 +2,6 @@ import About from "@/components/About";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Judges from "@/components/Judges";
 import Nav from "@/components/Nav";
 import Prizes from "@/components/Prizes";
 import Rules from "@/components/Rules";
@@ -30,7 +29,6 @@ export default function Home() {
         <Tracks />
         <Timeline />
         <Prizes />
-        <Judges />
         <Rules />
         <Submission />
         <Venue />

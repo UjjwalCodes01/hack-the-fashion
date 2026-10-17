@@ -28,9 +28,9 @@ export function RegisterButton({ className = "", onClick }: { className?: string
     >
       <span
         aria-hidden
-        className="clip-slant absolute inset-0 bg-gradient-to-r from-[#c026d3] via-[#a21caf] to-[#7c3aed] shadow-[0_0_24px_rgba(217,70,239,0.6)] transition-all group-hover:brightness-125"
+        className="clip-slant absolute inset-0 bg-gradient-to-r from-[#c24d23] via-[#af431c] to-[#eb7424] shadow-[0_0_24px_rgba(237,98,47,0.6)] transition-all group-hover:brightness-125"
       />
-      <span aria-hidden className="clip-slant absolute inset-[2px] bg-gradient-to-r from-[#d946ef]/90 to-[#8b5cf6]/90" />
+      <span aria-hidden className="clip-slant absolute inset-[2px] bg-gradient-to-r from-[#ed622f]/90 to-[#f58a42]/90" />
       <span className="relative">Register now</span>
       <span aria-hidden className="relative transition-transform group-hover:translate-x-1">
         →
@@ -98,7 +98,7 @@ export default function Nav({ home = true }: { home?: boolean }) {
                   >
                     {l.label}
                     <span
-                      className={`absolute inset-x-4 bottom-1 h-0.5 origin-center bg-gradient-to-r from-cyan to-violet shadow-[0_0_10px_rgba(34,211,238,0.8)] transition-transform duration-300 xl:inset-x-5 ${
+                      className={`absolute inset-x-4 bottom-1 h-0.5 origin-center bg-gradient-to-r from-cyan to-violet shadow-[0_0_10px_rgba(232,161,18,0.8)] transition-transform duration-300 xl:inset-x-5 ${
                         on ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       }`}
                     />
@@ -117,7 +117,7 @@ export default function Nav({ home = true }: { home?: boolean }) {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-label={open ? "Close menu" : "Open menu"}
-              className="relative flex size-11 flex-col items-center justify-center gap-1.5 border border-violet/60 shadow-[0_0_12px_rgba(168,85,247,0.35)] lg:hidden"
+              className="relative flex size-11 flex-col items-center justify-center gap-1.5 border border-violet/60 shadow-[0_0_12px_rgba(246,134,60,0.35)] lg:hidden"
             >
               <span className={`h-0.5 w-5 bg-frost transition-transform ${open ? "translate-y-[4px] rotate-45" : ""}`} />
               <span className={`h-0.5 w-5 bg-frost transition-transform ${open ? "-translate-y-[4px] -rotate-45" : ""}`} />
@@ -129,15 +129,15 @@ export default function Nav({ home = true }: { home?: boolean }) {
         <svg viewBox="0 0 1440 20" preserveAspectRatio="none" className="pointer-events-none absolute inset-x-0 bottom-0 h-5 w-full" aria-hidden>
           <defs>
             <linearGradient id="navline" x1="0" x2="1">
-              <stop offset="0" stopColor="#22d3ee" stopOpacity="0.15" />
-              <stop offset="0.3" stopColor="#a855f7" stopOpacity="0.9" />
-              <stop offset="0.7" stopColor="#a855f7" stopOpacity="0.9" />
-              <stop offset="1" stopColor="#22d3ee" stopOpacity="0.15" />
+              <stop offset="0" stopColor="#e8a112" stopOpacity="0.15" />
+              <stop offset="0.3" stopColor="#f6863c" stopOpacity="0.9" />
+              <stop offset="0.7" stopColor="#f6863c" stopOpacity="0.9" />
+              <stop offset="1" stopColor="#e8a112" stopOpacity="0.15" />
             </linearGradient>
           </defs>
           <path d="M0 19H120L134 6H380L396 19H470" fill="none" stroke="url(#navline)" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
           <path d="M970 19H1040L1056 6H1306L1320 19H1440" fill="none" stroke="url(#navline)" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
-          <path d="M1010 18l10-12M1022 18l10-12M1034 18l10-12" stroke="#e040fb" strokeWidth="2" vectorEffect="non-scaling-stroke" />
+          <path d="M1010 18l10-12M1022 18l10-12M1034 18l10-12" stroke="#fa6027" strokeWidth="2" vectorEffect="non-scaling-stroke" />
         </svg>
       </div>
 

@@ -7,10 +7,10 @@ import { PODIUM, SPECIAL_AWARDS } from "@/lib/content";
 type Tone = "cyan" | "gold" | "magenta" | "violet" | "green";
 
 const TONE: Record<Tone, { hex: string; text: string; amount: string }> = {
-  cyan: { hex: "#22d3ee", text: "text-cyan", amount: "from-[#c8f8ff] via-[#22d3ee] to-[#0ea5e9]" },
+  cyan: { hex: "#e8a112", text: "text-cyan", amount: "from-[#ffedc8] via-[#e8a112] to-[#d6930d]" },
   gold: { hex: "#fbbf24", text: "text-[#fbbf24]", amount: "from-[#fff3c4] via-[#fbbf24] to-[#d97706]" },
-  magenta: { hex: "#e040fb", text: "text-magenta", amount: "from-[#ffd1fb] via-[#f472b6] to-[#d946ef]" },
-  violet: { hex: "#a855f7", text: "text-violet", amount: "" },
+  magenta: { hex: "#fa6027", text: "text-magenta", amount: "from-[#ffddd1] via-[#f28157] to-[#ed622f]" },
+  violet: { hex: "#f6863c", text: "text-violet", amount: "" },
   green: { hex: "#22c55e", text: "text-[#4ade80]", amount: "" },
 };
 
@@ -137,7 +137,7 @@ export default function Prizes() {
       <div aria-hidden className="absolute inset-0 -z-10 bg-void">
         <Image src="/prize_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-void to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,transparent_40%,rgba(4,3,10,0.55)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,transparent_40%,rgba(10,6,3,0.55)_100%)]" />
       </div>
 
       <Banner side="left" />
@@ -152,7 +152,7 @@ export default function Prizes() {
             <span className="h-px w-16 bg-gradient-to-l from-transparent to-cyan/70 md:w-28" />
           </div>
           <h2 className="mt-3 font-display text-[10vw] font-black uppercase leading-none sm:text-6xl lg:text-7xl">
-            <span className="bg-gradient-to-b from-[#ff8af0] via-[#f43fd8] to-[#c026d3] bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(244,63,216,0.55)]">
+            <span className="bg-gradient-to-b from-[#ff926b] via-[#f35e28] to-[#c24d23] bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(243,94,40,0.55)]">
               <span className="font-sans">₹</span>50,000+
             </span>{" "}
             <span className="neon-white">In</span> <span className="grad-24">Prizes</span>
@@ -209,7 +209,7 @@ export default function Prizes() {
               style={{ clipPath: "polygon(28px 0, calc(100% - 28px) 0, 100% 100%, 0 100%)" }}
             >
               <div
-                className="flex items-center gap-3 bg-[#07051a] px-12 py-2.5"
+                className="flex items-center gap-3 bg-[#1a0d05] px-12 py-2.5"
                 style={{ clipPath: "polygon(27px 0, calc(100% - 27px) 0, 100% 100%, 0 100%)" }}
               >
                 <Icon name="trophy" className="size-6 text-cyan" />
@@ -217,7 +217,7 @@ export default function Prizes() {
               </div>
             </div>
           </div>
-          <div className="border border-violet/60 bg-[#07051a]/85 p-4 shadow-[0_0_40px_rgba(168,85,247,0.3)] backdrop-blur-sm md:p-5">
+          <div className="border border-violet/60 bg-[#1a0d05]/85 p-4 shadow-[0_0_40px_rgba(246,134,60,0.3)] backdrop-blur-sm md:p-5">
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {SPECIAL_AWARDS.map((a, i) => {
                 const s = AWARD_STYLE[i];

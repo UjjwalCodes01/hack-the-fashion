@@ -50,12 +50,12 @@ function PixelQ({ color }: { color: string }) {
 function QuestionCube({ size, className = "", style }: { size: number; className?: string; style?: CSSProperties }) {
   const half = size / 2;
   const faces = [
-    { t: `translateZ(${half}px)`, c: "#f5d0fe", b: "#e040fb" },
-    { t: `rotateY(90deg) translateZ(${half}px)`, c: "#67e8f9", b: "#22d3ee" },
-    { t: `rotateY(180deg) translateZ(${half}px)`, c: "#f5d0fe", b: "#e040fb" },
-    { t: `rotateY(-90deg) translateZ(${half}px)`, c: "#67e8f9", b: "#22d3ee" },
-    { t: `rotateX(90deg) translateZ(${half}px)`, c: "#e9d5ff", b: "#a855f7" },
-    { t: `rotateX(-90deg) translateZ(${half}px)`, c: "#e9d5ff", b: "#a855f7" },
+    { t: `translateZ(${half}px)`, c: "#fedcd0", b: "#fa6027" },
+    { t: `rotateY(90deg) translateZ(${half}px)`, c: "#f8bf4c", b: "#e8a112" },
+    { t: `rotateY(180deg) translateZ(${half}px)`, c: "#fedcd0", b: "#fa6027" },
+    { t: `rotateY(-90deg) translateZ(${half}px)`, c: "#f8bf4c", b: "#e8a112" },
+    { t: `rotateX(90deg) translateZ(${half}px)`, c: "#ffe6d5", b: "#f6863c" },
+    { t: `rotateX(-90deg) translateZ(${half}px)`, c: "#ffe6d5", b: "#f6863c" },
   ];
   return (
     <div className={className} style={{ width: size, height: size, perspective: size * 5, ...style }} aria-hidden>
@@ -67,7 +67,7 @@ function QuestionCube({ size, className = "", style }: { size: number; className
             style={{
               transform: f.t,
               background:
-                "linear-gradient(135deg,#2a1748 0%,#160c2c 55%,#0e081e 100%), repeating-linear-gradient(0deg,transparent 0 11px,rgba(255,255,255,0.04) 11px 12px)",
+                "linear-gradient(135deg,#482b17 0%,#2c190c 55%,#1e1108 100%), repeating-linear-gradient(0deg,transparent 0 11px,rgba(255,255,255,0.04) 11px 12px)",
               border: `${Math.max(2, size / 40)}px solid ${f.b}`,
               boxShadow: `inset 0 0 ${size / 6}px ${f.b}66, 0 0 ${size / 8}px ${f.b}88`,
             }}
@@ -101,12 +101,12 @@ function CubeShrine() {
         {steps.map((s, i) => (
           <div
             key={s}
-            className="relative flex h-14 items-center border border-[#3b2a5c] bg-gradient-to-b from-[#2a1d42] to-[#170f28] px-5 shadow-[inset_0_2px_0_rgba(255,255,255,0.06),0_6px_14px_rgba(0,0,0,0.5)]"
+            className="relative flex h-14 items-center border border-[#5c3e2a] bg-gradient-to-b from-[#422c1d] to-[#28190f] px-5 shadow-[inset_0_2px_0_rgba(255,255,255,0.06),0_6px_14px_rgba(0,0,0,0.5)]"
             style={{ marginLeft: `${i * 9}%`, marginTop: i ? -2 : 0 }}
           >
             <span className="absolute inset-0 opacity-30 [background-image:linear-gradient(90deg,rgba(0,0,0,0.5)_1px,transparent_1px),linear-gradient(rgba(0,0,0,0.5)_1px,transparent_1px)] [background-size:22px_14px]" />
-            <span className="relative font-display text-xl font-black uppercase tracking-[0.06em] text-[#f9a8f4] drop-shadow-[0_0_8px_#e040fb]">{s}</span>
-            <span className="absolute -left-1 bottom-1 size-2.5 bg-magenta shadow-[0_0_10px_#e040fb]" />
+            <span className="relative font-display text-xl font-black uppercase tracking-[0.06em] text-[#f9bea8] drop-shadow-[0_0_8px_#fa6027]">{s}</span>
+            <span className="absolute -left-1 bottom-1 size-2.5 bg-magenta shadow-[0_0_10px_#fa6027]" />
           </div>
         ))}
       </div>
@@ -120,10 +120,10 @@ type Item = { q: string; a: ReactNode; icon: string };
 
 function Row({ item, i, open, onToggle }: { item: Item; i: number; open: boolean; onToggle: () => void }) {
   // Rows alternate magenta / cyan; the open row is always magenta.
-  const hex = open ? "#e040fb" : i % 2 === 0 ? "#d946ef" : "#22d3ee";
-  const tone = hex === "#22d3ee" ? "text-cyan" : "text-magenta";
+  const hex = open ? "#fa6027" : i % 2 === 0 ? "#ed622f" : "#e8a112";
+  const tone = hex === "#e8a112" ? "text-cyan" : "text-magenta";
   return (
-    <NeonFrame hex={hex} innerClassName={open ? "bg-gradient-to-r from-[#3b0d4f]/95 via-[#1a0b33]/95 to-[#0b0722]/95" : "bg-[#0a0620]/92"}>
+    <NeonFrame hex={hex} innerClassName={open ? "bg-gradient-to-r from-[#4f1f0d]/95 via-[#331b0b]/95 to-[#221207]/95" : "bg-[#201006]/92"}>
       <h3>
         <button
           type="button"
@@ -135,7 +135,7 @@ function Row({ item, i, open, onToggle }: { item: Item; i: number; open: boolean
         >
           <Icon name={item.icon} className={`size-6 shrink-0 ${tone}`} />
           <span aria-hidden className="h-6 w-px bg-white/15" />
-          <span className={`flex-1 font-ui text-[15px] font-bold md:text-base ${open ? "text-[#f0abfc]" : "text-white"}`}>{item.q}</span>
+          <span className={`flex-1 font-ui text-[15px] font-bold md:text-base ${open ? "text-[#fcc1ab]" : "text-white"}`}>{item.q}</span>
           <svg viewBox="0 0 24 24" className={`size-5 shrink-0 transition-transform duration-300 ${tone} ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
             <path d="m6 9 6 6 6-6" />
           </svg>
@@ -188,15 +188,15 @@ export default function Faq() {
   return (
     <section id="faq" className="relative isolate overflow-hidden pb-24 pt-24 md:pt-28 lg:min-h-[max(100svh,940px)]">
       <div aria-hidden className="absolute inset-0 -z-10 bg-void">
-        <Image src="/faq_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
+        <Image src="/new_bg.png" alt="" fill sizes="100vw" className="object-cover object-bottom" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-void to-transparent" />
       </div>
 
       <div className="relative mx-auto w-[92%] max-w-[1200px] xl:w-[78%]">
         <Reveal className="text-center">
-          <Kicker>// 09. FAQ //</Kicker>
+          <Kicker>// 08. FAQ //</Kicker>
           <h2 className="mt-4 font-display text-[9vw] font-black uppercase leading-none sm:text-6xl lg:text-7xl">
-            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(200,220,255,0.35)]">
+            <span className="bg-gradient-to-b from-white via-[#e6e9f5] to-[#9aa3b8] bg-clip-text text-transparent drop-shadow-[0_0_14px_rgba(255,230,200,0.35)]">
               Questions,
             </span>{" "}
             <span className="grad-circuit">Answered</span>

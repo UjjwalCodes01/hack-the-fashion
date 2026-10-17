@@ -11,7 +11,6 @@ const COLUMNS = [
       { href: "/#tracks", label: "Tracks" },
       { href: "/#timeline", label: "Timeline" },
       { href: "/#prizes", label: "Prizes" },
-      { href: "/#judges", label: "Judges" },
     ],
   },
   {
@@ -58,7 +57,7 @@ export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-void">
       {/* top neon rule */}
-      <div aria-hidden className="h-px bg-gradient-to-r from-cyan via-violet to-magenta shadow-[0_0_18px_#a855f7]" />
+      <div aria-hidden className="h-px bg-gradient-to-r from-cyan via-violet to-magenta shadow-[0_0_18px_#f6863c]" />
       <div aria-hidden className="hud-grid absolute inset-0 -z-10 opacity-40" />
       <div aria-hidden className="absolute -left-40 top-20 -z-10 size-[520px] rounded-full bg-magenta/10 blur-[120px]" />
       <div aria-hidden className="absolute -right-40 bottom-10 -z-10 size-[520px] rounded-full bg-cyan/10 blur-[120px]" />
@@ -67,7 +66,7 @@ export default function Footer() {
 
       <div className="relative mx-auto w-[92%] max-w-[1200px] pt-16">
         {/* CTA */}
-        <NeonFrame hex="#a855f7" fill="linear-gradient(90deg,#22d3ee,#a855f7 50%,#e040fb)" innerClassName="bg-[#0a0620]/92">
+        <NeonFrame hex="#f6863c" fill="linear-gradient(90deg,#e8a112,#f6863c 50%,#fa6027)" innerClassName="bg-[#201006]/92">
           <div className="flex flex-col items-start gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-10">
             <div>
               <Label className="text-cyan">// Ready · Set · Build</Label>
@@ -100,7 +99,7 @@ export default function Footer() {
                     href={s.href}
                     {...(s.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     aria-label={s.label}
-                    className="flex size-10 items-center justify-center border border-violet/50 text-frost/80 transition hover:border-magenta hover:text-magenta hover:shadow-[0_0_14px_rgba(224,64,251,0.5)]"
+                    className="flex size-10 items-center justify-center border border-violet/50 text-frost/80 transition hover:border-magenta hover:text-magenta hover:shadow-[0_0_14px_rgba(250,96,39,0.5)]"
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-5" aria-hidden>
                       {s.d.map((d) => (
@@ -171,7 +170,7 @@ export default function Footer() {
       {/* Watermark */}
       <p
         aria-hidden
-        className="pointer-events-none -mb-[1.6vw] select-none whitespace-nowrap text-center font-display text-[8.2vw] font-black uppercase leading-none text-transparent [-webkit-text-stroke:1px_rgba(168,85,247,0.35)]"
+        className="pointer-events-none -mb-[1.6vw] select-none whitespace-nowrap text-center font-display text-[8.2vw] font-black uppercase leading-none text-transparent [-webkit-text-stroke:1px_rgba(246,134,60,0.35)]"
       >
         Hack the Fashion
       </p>

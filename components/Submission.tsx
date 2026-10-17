@@ -18,7 +18,7 @@ const LABEL_FIXES = [
 ];
 
 /** Tiny pixel sparkle / crown ornaments around the title. */
-function Sparkle({ className = "", color = "#c4b5fd" }: { className?: string; color?: string }) {
+function Sparkle({ className = "", color = "#fdd2b5" }: { className?: string; color?: string }) {
   return (
     <svg viewBox="0 0 7 7" className={className} shapeRendering="crispEdges" aria-hidden style={{ filter: `drop-shadow(0 0 4px ${color})` }}>
       {[[3, 0], [3, 1], [2, 2], [3, 2], [4, 2], [0, 3], [1, 3], [2, 3], [3, 3], [4, 3], [5, 3], [6, 3], [2, 4], [3, 4], [4, 4], [3, 5], [3, 6]].map(([x, y]) => (
@@ -45,13 +45,13 @@ function PortalButton() {
       <span className="flex items-center justify-center self-stretch bg-violet/40 px-5 xl:px-[1.2cqw]">
         <Icon name="send" filled className="size-7 text-white xl:size-[1.8cqw]" />
       </span>
-      <span className="flex flex-1 items-center justify-center gap-3 whitespace-nowrap px-6 py-4 font-display text-sm font-bold uppercase tracking-[0.1em] text-white xl:gap-[0.8cqw] xl:px-[1.2cqw] xl:py-[1cqw] xl:text-[0.95cqw]">
+      <span className="flex flex-1 items-center justify-center gap-3 px-6 py-4 text-center xl:whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.1em] text-white xl:gap-[0.8cqw] xl:px-[1.2cqw] xl:py-[1cqw] xl:text-[0.95cqw]">
         {live ? "Go to submission portal" : "Portal opens on 2 Nov"} <span aria-hidden>→</span>
       </span>
     </>
   );
   const cls =
-    "group flex items-stretch overflow-hidden border-2 border-[#a78bfa] bg-gradient-to-r from-[#3b1a8a] via-[#4c1d95] to-[#3b1a8a] shadow-[0_0_30px_rgba(139,92,246,0.7)] transition";
+    "group flex items-stretch overflow-hidden border-2 border-[#f9a56d] bg-gradient-to-r from-[#8a471a] via-[#954d1d] to-[#8a471a] shadow-[0_0_30px_rgba(245,138,66,0.7)] transition";
   return live ? (
     <a href={EVENT.submissionUrl} target="_blank" rel="noopener noreferrer" className={`${cls} hover:brightness-125`}>
       {inner}
@@ -65,11 +65,11 @@ function PortalButton() {
 
 export default function Submission() {
   return (
-    <Stage id="submission" bg="/submission_bg.png" w={1672} h={941}>
+    <Stage id="submission" bg="/new_bg.png" w={1669} h={942}>
       {/* Banner text on the left banner of submission_bg.png */}
       <p
         aria-hidden
-        className="absolute left-[4.3%] top-[31%] hidden w-[6.2%] -rotate-[4deg] text-center font-display text-[1.3cqw] font-black uppercase leading-[1.05] text-frost [text-shadow:0_0_0.6cqw_rgba(168,85,247,0.9)] xl:block"
+        className="absolute left-[4.3%] top-[31%] hidden w-[6.2%] -rotate-[4deg] text-center font-display text-[1.3cqw] font-black uppercase leading-[1.05] text-frost [text-shadow:0_0_0.6cqw_rgba(246,134,60,0.9)] xl:block"
       >
         Ideas
         <br />
@@ -81,21 +81,21 @@ export default function Submission() {
       {/* Heading */}
       <At l={30} t={2} w={40} className="text-center">
         <Reveal>
-          <Kicker>// 06. Submission //</Kicker>
+          <Kicker>// 05. Submission //</Kicker>
           <h2 className="relative mt-3 font-display font-black uppercase leading-[0.95] xl:mt-[0.7cqw]">
-            <span className="block text-[12vw] text-white drop-shadow-[0_0_16px_rgba(196,181,253,0.7)] sm:text-7xl xl:text-[4.4cqw]">Submit</span>
-            <span className="block bg-gradient-to-b from-[#ede9fe] via-[#c4b5fd] to-[#8b5cf6] bg-clip-text text-[12vw] text-transparent drop-shadow-[0_0_18px_rgba(139,92,246,0.8)] sm:text-7xl xl:text-[4.4cqw]">
+            <span className="block text-[12vw] text-white drop-shadow-[0_0_16px_rgba(253,210,181,0.7)] sm:text-7xl xl:text-[4.4cqw]">Submit</span>
+            <span className="block bg-gradient-to-b from-[#fef1e9] via-[#fdd2b5] to-[#f58a42] bg-clip-text text-[12vw] text-transparent drop-shadow-[0_0_18px_rgba(245,138,66,0.8)] sm:text-7xl xl:text-[4.4cqw]">
               Your idea
             </span>
             <Sparkle className="absolute left-[12%] top-[14%] hidden size-[2cqw] xl:block" />
             <Sparkle className="absolute left-[2%] top-[58%] hidden size-[2.2cqw] xl:block" color="#fcd34d" />
             <Crown className="absolute right-[11%] top-[10%] hidden w-[2.3cqw] xl:block" />
-            <Sparkle className="absolute right-[2%] top-[58%] hidden size-[2.2cqw] xl:block" color="#e879f9" />
+            <Sparkle className="absolute right-[2%] top-[58%] hidden size-[2.2cqw] xl:block" color="#f8865d" />
           </h2>
           <p className="mt-4 font-ui text-xs font-semibold uppercase tracking-[0.4em] text-frost xl:mt-[0.9cqw] xl:text-[0.9cqw]">
             Build <span className="text-violet">›</span> Submit <span className="text-violet">›</span> Freeze <span className="text-violet">›</span> Compete
           </p>
-          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-frost/90 [text-shadow:0_1px_6px_rgba(0,0,0,0.95),0_0_14px_rgba(0,0,0,0.8)] xl:mt-[0.6cqw] xl:max-w-none xl:text-[0.98cqw]">
+          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-frost/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)] xl:mt-[0.6cqw] xl:max-w-none xl:text-[0.98cqw]">
             Package your innovation and submit all the required items before the code freeze deadline. Make sure
             everything is complete and working.
           </p>
@@ -111,7 +111,7 @@ export default function Submission() {
               <span
                 key={f.text}
                 aria-hidden
-                className="absolute flex items-center justify-center whitespace-nowrap rounded-[0.4cqw] bg-[#2a0b22] px-[0.4cqw] py-[0.15cqw] font-ui text-[1.75cqw] font-bold uppercase leading-none tracking-[0.02em] text-[#fbeaff] shadow-[0_0_0.6cqw_0.4cqw_#2a0b22]"
+                className="absolute flex items-center justify-center whitespace-nowrap rounded-[0.4cqw] bg-[#2a130b] px-[0.4cqw] py-[0.15cqw] font-ui text-[1.75cqw] font-bold uppercase leading-none tracking-[0.02em] text-[#fff0ea] shadow-[0_0_0.6cqw_0.4cqw_#2a130b]"
                 style={{ left: `${f.x}%`, top: `${f.y}%`, minWidth: `${f.w}%`, transform: `translate(-50%,-50%) rotate(${f.rot}deg)` } as CSSProperties}
               >
                 {f.text}
@@ -137,16 +137,16 @@ export default function Submission() {
       <At l={74.3} t={17} w={23.4} className="mt-12 xl:mt-0">
         <Reveal delay={0.1}>
           <div className="rounded-sm bg-void/60 p-4 backdrop-blur-sm xl:p-[0.9cqw]">
-            <p className="font-display text-lg font-black uppercase tracking-[0.04em] text-[#fbbf24] [text-shadow:0_0_12px_rgba(251,191,36,0.5)] xl:text-[1.15cqw]">
+            <p className="font-display text-lg font-black uppercase tracking-[0.04em] text-[#fbbf24] drop-shadow-[0_0_10px_rgba(251,191,36,0.5)] xl:text-[1.15cqw]">
               Submission steps
             </p>
             <ol className="relative mt-4 space-y-3 pl-6 xl:mt-[0.9cqw] xl:space-y-[0.6cqw] xl:pl-[1.6cqw]">
               <span aria-hidden className="absolute bottom-3 left-[5px] top-3 w-px bg-gradient-to-b from-[#fbbf24] via-violet to-violet xl:left-[0.32cqw]" />
               {SUBMISSION_STEPS.map((s, i) => (
                 <li key={s.title} className="relative">
-                  <span aria-hidden className="absolute -left-6 top-1/2 size-2.5 -translate-y-1/2 rotate-45 bg-violet shadow-[0_0_8px_#a855f7] xl:-left-[1.6cqw] xl:size-[0.7cqw]" />
-                  <div className="flex items-center gap-3 border border-violet/40 bg-[#120a2a]/90 p-3 xl:gap-[0.8cqw] xl:p-[0.7cqw]">
-                    <span className="flex size-11 shrink-0 items-center justify-center bg-gradient-to-b from-[#9333ea] to-[#6d28d9] font-display text-base font-bold text-white xl:size-[2.7cqw] xl:text-[1.05cqw]">
+                  <span aria-hidden className="absolute -left-6 top-1/2 size-2.5 -translate-y-1/2 rotate-45 bg-violet shadow-[0_0_8px_#f6863c] xl:-left-[1.6cqw] xl:size-[0.7cqw]" />
+                  <div className="flex items-center gap-3 border border-violet/40 bg-[#2a170a]/90 p-3 xl:gap-[0.8cqw] xl:p-[0.7cqw]">
+                    <span className="flex size-11 shrink-0 items-center justify-center bg-gradient-to-b from-[#e86f1e] to-[#c96624] font-display text-base font-bold text-white xl:size-[2.7cqw] xl:text-[1.05cqw]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="min-w-0 flex-1">
@@ -167,7 +167,7 @@ export default function Submission() {
         {SUBMISSION.map((item, i) => (
           <li key={item.title}>
             <Reveal delay={0.06 * i} y={16} className="h-full">
-              <NeonFrame hex={item.tone} innerClassName="bg-[#0a0620]/90" className="h-full">
+              <NeonFrame hex={item.tone} innerClassName="bg-[#201006]/90" className="h-full">
                 <div className="flex h-full gap-3 p-4 xl:gap-[0.8cqw] xl:p-[0.8cqw]">
                   <span
                     className="flex size-12 shrink-0 items-center justify-center rounded-sm xl:size-[3cqw]"
